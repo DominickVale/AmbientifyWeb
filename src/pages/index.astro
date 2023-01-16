@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { makeUrl } from '../utils/url';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -8,12 +9,12 @@ import Card from '../components/Card.astro';
 		<h1>Welcome to<span class="text-gradient"> Ambientify</span></h1>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="/privacy-policy"
+				href={makeUrl("/privacy-policy")}
 				title="Privacy Policy"
 				body="Ambientify's privacy policy statement"
 			/>
 			<Card
-				href="/terms-and-conditions"
+				href={makeUrl("/terms-and-conditions")}
 				title="Terms and Conditions"
 				body="Ambientify's Terms and Conditions statement"
 			/>
